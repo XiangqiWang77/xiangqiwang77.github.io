@@ -44,7 +44,7 @@ academia:
 ---
 I’m a first-year PhD student in [MINE][1] Lab of Computer Science and Engineering (CSE) at the University of Notre Dame began from Fall 2024, supervised by Prof. [Xiangliang Zhang][2]. Previously, I was fortunate to be advised by Prof.[Qi Liu][3] in USTC and remotely supervised by Prof. [Huazheng Wang][4] and [Jian Kang][5]. I also did research on causal inference mentored by Prof. [Zhuoran Yang][6].
 
-
+I am deeply interested in large language models (LLMs)—especially reinforcement learning (RL) for LLMs, reasoning capabilities, and foundational problems such as knowledge graphs and bandit algorithms. My research designs learning frameworks that strengthen LLM reasoning and decision-making, informed by graph representation and online learning, while advancing trustworthy AI principles (robustness, reliability, transparency). I also care about the social impact of AI, aiming to translate technical progress into safe, equitable, and beneficial real-world applications.
 
 [1]: https://mine-lab-nd.github.io/
 [2]: https://engineering.nd.edu/faculty/xiangliang-zhang/
