@@ -11,10 +11,10 @@ cv: "cv.pdf"
 blog: false
 
 socials:
-    twitter: "YOUR_NAME"
-    github: "YOUR_NAME"
-    linkedin: "YOUR_NAME"
-    google_scholar: "YOUR_NAME"
+    twitter: "wang_xiangqi"
+    github: "XiangqiWang77"
+    linkedin: "xiangqi-wang-447ba6338"
+    google_scholar: "citations?user=7jBSnlgAAAAJ&hl=en&authuser=1"
 
 interests:
     - Large Language Models
@@ -25,37 +25,30 @@ interests:
 
 affiliations:
     - affiliation:
-        title: "Ph.D. Student"
-        name: "University of Notre Dame"
+        title: "I am seeking potential research collaborations and the position of industry research intern.  If you are interested, please contact me."
         email: "xwang76@nd.edu"
-    - affiliation:
-        title: "Bachelor of Science"
-        name: "University of Science and Technology of China (School of the Gifted Young)"
 
 academia:
     - course:
-        degree: "Ph.D."
-        institution:  "Stanford University"
-        major: "Data Systems"
-        start_date: "2021"
-    - course:
-        degree: "M.Sc."
-        institution: 'Sharif University of Technology'
-        major: 'Software Engineering'
-        start_date: '2013'
-        end_date: '2016'
-        other_info: 'graduated without first class honor, supervised by Prof. Very Cool!'
+        degree: "Ph.D. Student"
+        institution:  "University of Notre Dame"
+        major: "CSE"
+        start_date: "2024"
     - course:
         degree: "B.Sc."
-        institution: 'University of Kashan'
-        major: 'Software Engineering'
-        minor: 'Statistics'
-        start_date: '2009'
-        end_date: '2013'
-        other_info: 'graduated with first class honor, supervised by Prof.  Cool!'
+        institution: 'University of Science and Technology of China'
+        major: 'CSE'
+        start_date: '2020'
+        end_date: '2024'
+        other_info: 'graduated without first class honor from School of the Gifted Young'
 ---
-**Donec** sollicitudin, [ante][1] pulvinar tincidunt luctus, dolor mauris lobortis ex, id tincidunt metus risus nec ex. Curabitur magna mauris, facilisis vitae porttitor vitae, tincidunt sed mi. In at dui lectus. Integer ante arcu, vestibulum fermentum ante eu, maximus maximus quam. Curabitur placerat cursus posuere. Phasellus dui lorem, varius a augue non, eleifend accumsan mauris. Aenean varius posuere feugiat. In hac habitasse platea dictumst. Aenean quis ex quis nisl consequat fermentum in vitae nunc. Proin consectetur ac nulla in tempus. Maecenas enim nisi, pulvinar sit amet fermentum eget, ultrices vitae enim. Etiam vel sollicitudin felis.
+I’m a first-year PhD student in [MINE][1] Lab of Computer Science and Engineering (CSE) at the University of Notre Dame began from Fall 2024, supervised by Prof. [Xiangliang Zhang][2]. Previously, I was fortunate to be advised by Prof.[Qi Liu][3] in USTC and remotely supervised by Prof. [Huazheng Wang][4] and [Jian Kang][5]. I also did research on causal inference mentored by Prof. [Zhuoran Yang][6].
 
-Donec sollicitudin, ante pulvinar tincidunt luctus, dolor mauris lobortis ex, id tincidunt metus risus nec ex. Curabitur magna mauris, facilisis vitae porttitor vitae,
 
-[1]: ahadsfsa.com
+
+[1]: https://mine-lab-nd.github.io/
+[2]: https://engineering.nd.edu/faculty/xiangliang-zhang/
+[3]: http://staff.ustc.edu.cn/~qiliuql/
+[4]: https://huazhengwang.github.io/
+[5]: https://jiank2.github.io/
+[6]: https://zhuoranyang.github.io/
