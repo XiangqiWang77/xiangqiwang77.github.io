@@ -1,9 +1,8 @@
 ---
-title: "Vestibulum: Olive Tadpole Pit Bull Terrier"
+title: "Knowledge Network of Wildlife Query Website"
 
-date: "2019-03-30"
+date: "2025-09-18"
 
 links:
-    website: 'https://github.com/hadisinaee/avicenna'
+    website: 'https://kn-wildlife.crc.nd.edu/'
 ---
-

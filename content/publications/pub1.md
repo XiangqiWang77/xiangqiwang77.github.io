@@ -1,17 +1,18 @@
 ---
-title: "Your Paper Name Goes Here"
+title: "AdaReasoner: Adaptive Reasoning Enables More Flexible Thinking on Large Language Models"
 authors:
-- Your Full Name
-- Another Researcher
-date: "2018-09-01"
-
-publication: "Journal of Machine Learning"
-
+  - Xiangqi Wang
+  - Y. Huang
+  - Y. Wang
+  - X. Luo
+  - K. Guo
+  - Y. Zhou
+  - X. Zhang
+date: "2025-05-01"
+publication: "NeurIPS"
 links:
-    pdf: https://github.com/hadisinaee/avicenna
-    code: https://github.com/hadisinaee/avicenna
-    slides: https://github.com/hadisinaee/avicenna
-    video: https://github.com/hadisinaee/avicenna
-
+  pdf: https://arxiv.org/pdf/2505.17312.pdf
+  code: ""
+  slides: ""
+  video: ""
 ---
-

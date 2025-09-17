@@ -1,10 +1,8 @@
 ---
-title: "Quisque: Lime Trout Sheepdog"
+title: "Modified verl framework with Jacobian Causal Scores"
 
-date: "2018-05-18"
+date: "2025-09-18"
 
 links:
-    website: 'https://github.com/hadisinaee/avicenna'
-    alias: link_name_here
+    website: 'https://github.com/XiangqiWang77/causalrl'
 ---
-
