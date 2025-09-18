@@ -8,9 +8,13 @@ headless: true
 show_news_icons: true
 default_news_icon: "file-text"
 
-num_news: 5
+num_news: 78
 
 news_items:
+- text: "Check our research of causal enhanced RL on LLM!"
+  extra_text: "Sep 2025."
+- text: "One First-Author Paper is accepted by NeurIPS 2025 as Spotlight!"
+  extra_text: "Sep 2025."
 - text: "One Paper is accepted by EMNLP 2025!"
   extra_text: "Sep 2025."
 - text: "One Paper is accepted by COLM 2025!"

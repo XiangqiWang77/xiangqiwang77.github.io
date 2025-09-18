@@ -1,20 +1,17 @@
 ---
-title: "Fair Online Influence Maximization"
+title: "Causally-Enhanced Reinforcement Policy Optimization of Large Language Models"
 authors:
   - Xiangqi Wang
-  - S. Zhang
-  - J. E. A. Escamilla
-  - Q. Wu
+  - Y. Huang
+  - Y. Zhou
+  - X. Luo
+  - K. Guo
   - X. Zhang
-  - J. Kang
-  - H. Wang
-date: "2025-01-01"
-publication: "Transactions on Machine Learning Research (TMLR)"
+date: "2025-09-18"
+publication: "Arxiv:"
 links:
-  pdf: "https://openreview.net/pdf?id=T1NjRBI5xs"
+  pdf: "arxiv:"
   code: ""
   slides: ""
   video: ""
-
-
 ---
