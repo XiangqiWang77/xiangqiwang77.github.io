@@ -40,7 +40,7 @@ academia:
         major: 'CSE'
         start_date: '2020'
         end_date: '2024'
-        other_info: 'graduated without first class honor from School of the Gifted Young'
+        other_info: 'graduated with first class honor from School of the Gifted Young'
 ---
 I’m a first-year PhD student in [MINE][1] Lab of Computer Science and Engineering (CSE) at the University of Notre Dame began from Fall 2024, supervised by Prof. [Xiangliang Zhang][2]. Previously, I was fortunate to be advised by Prof.[Qi Liu][3] in USTC and remotely supervised by Prof. [Huazheng Wang][4] and [Jian Kang][5]. I also did research on causal inference mentored by Prof. [Zhuoran Yang][6].
 
