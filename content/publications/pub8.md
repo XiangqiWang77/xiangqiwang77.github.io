@@ -1,21 +1,19 @@
 ---
-title: "AutoBench-V: Can Large Vision-Language Models Benchmark Themselves?"
+title: "Social Science Meets LLMs: How Reliable Are Large Language Models in Social Simulations?"
 authors:
-  - H. Bao
   - Y. Huang
-  - Y. Wang
-  - J. Ye
+  - Z. Yuan
+  - Y. Zhou
+  - K. Guo
   - Xiangqi Wang
-  - X. Chen
-  - Y. Zhao
-  - T. Zhou
+  - H. Zhuang
+  - W. Sun
+  - L. Sun
 date: "2024-10-01"
-publication: "arXiv preprint arXiv:2410.21259"
+publication: "COLM"
 links:
-  pdf: https://arxiv.org/pdf/2410.21259.pdf
+  pdf: https://arxiv.org/pdf/2410.23426.pdf
   code: ""
   slides: ""
   video: ""
-
-
 ---

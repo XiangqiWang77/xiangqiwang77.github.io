@@ -1,17 +1,18 @@
 ---
-title: "Fair Online Influence Maximization"
+title: "AutoBench-V: Can Large Vision-Language Models Benchmark Themselves?"
 authors:
+  - H. Bao
+  - Y. Huang
+  - Y. Wang
+  - J. Ye
   - Xiangqi Wang
-  - S. Zhang
-  - J. E. A. Escamilla
-  - Q. Wu
-  - X. Zhang
-  - J. Kang
-  - H. Wang
-date: "2025-01-01"
-publication: "Transactions on Machine Learning Research (TMLR)"
+  - X. Chen
+  - Y. Zhao
+  - T. Zhou
+date: "2024-10-01"
+publication: "arXiv preprint arXiv:2410.21259"
 links:
-  pdf: "https://openreview.net/pdf?id=T1NjRBI5xs"
+  pdf: https://arxiv.org/pdf/2410.21259.pdf
   code: ""
   slides: ""
   video: ""

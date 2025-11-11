@@ -1,22 +1,18 @@
 ---
-title: "On the Trustworthiness of Generative Foundation Models: Guideline, Assessment, and Perspective"
+title: "CLIPErase: Efficient Unlearning of Visual-Textual Associations in CLIP"
 authors:
-  - Y. Huang
-  - C. Gao
-  - S. Wu
-  - H. Wang
+  - T. Yang
+  - L. Dai
   - Xiangqi Wang
-  - Y. Zhou
-  - Y. Wang
-  - J. Ye
-  - J. Shi
-date: "2025-02-01"
-publication: "arXiv preprint arXiv:2502.14296"
+  - M. Cheng
+  - Y. Tian
+  - X. Zhang
+date: "2024-10-01"
+publication: "ACL"
 links:
-  pdf: https://arxiv.org/pdf/2502.14296.pdf
+  pdf: "https://aclanthology.org/2025.acl-long.1469.pdf"
   code: ""
   slides: ""
   video: ""
-
 
 ---
