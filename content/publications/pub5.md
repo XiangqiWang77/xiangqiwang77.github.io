@@ -8,7 +8,7 @@ authors:
   date: “2025-11-09”
   publication: “AAAI”
   links:
-  pdf: “[https://arxiv.org/pdf/2511.06222v1”](https://arxiv.org/pdf/2511.06222v1”)
+  pdf: https://arxiv.org/pdf/2511.06222v1
   code: “”
   slides: “”
   video: “”
