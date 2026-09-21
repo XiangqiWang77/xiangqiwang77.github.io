@@ -13,6 +13,7 @@
   },
   {
     "id": "coherence-enhanced-policy-optimization",
+    "aliases": ["CE-PO", "CEPO"],
     "title": "Right Answers for the Right Reasons: Coherence-Enhanced Policy Optimization for Large Language Models",
     "authors": "Xiangqi Wang, Y. Huang, Y. Zhou, X. Luo, K. Guo, Y. Ma, X. Zhang",
     "year": 2026,
@@ -26,6 +27,7 @@
   },
   {
     "id": "dual-preference-optimization",
+    "aliases": ["Dignified Peers", "Lag-DPO", "Dual Optimal"],
     "title": "From Evasive Servants to Dignified Peers via Dual Preference Optimization",
     "authors": "Xiangqi Wang, Y. Huang, H. Zhuang, K. Guo, X. Zhang",
     "year": 2026,
@@ -75,6 +77,7 @@
   },
   {
     "id": "locality-guided-self-distillation",
+    "aliases": ["LGSD"],
     "title": "Locality-Guided Self-Distillation",
     "authors": "Xiangqi Wang, D. Aishan, K. Guo, Y. Huang, X. Zhang",
     "year": 2027,

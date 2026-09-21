@@ -55,7 +55,7 @@ export function renderPublications(publications) {
   const labels = { submission: 'Under review', preprint: 'Preprint', ongoing: 'Ongoing' };
   return publications.map((publication, index) => {
     const authors = Array.isArray(publication.authors) ? publication.authors.join(', ') : publication.authors;
-    const search = [publication.title, authors, publication.venue, publication.note || '', ...publication.topics].join(' ').toLowerCase();
+    const search = [publication.title, authors, publication.venue, publication.note || '', ...(publication.aliases || []), ...publication.topics].join(' ').toLowerCase();
     const authorHtml = escapeHtml(authors).replace(/Xiangqi Wang/g, '<strong>Xiangqi Wang</strong>');
     const title = escapeHtml(publication.title);
     const yearLabel = publication.year !== null && !new RegExp(`\\b${publication.year}\\b`).test(publication.venue)
@@ -65,7 +65,7 @@ export function renderPublications(publications) {
     return `      <li class="publication" id="pub-${escapeHtml(publication.id)}" data-year="${publication.year ?? ''}" data-status="${publication.status}" data-role="${publication.role}" data-topics="${escapeHtml(publication.topics.join(' '))}" data-search="${escapeHtml(search)}">
         <span class="pub-number" aria-hidden="true">${String(index + 1).padStart(2, '0')}</span>
         <div class="pub-content">
-          <div class="pub-meta"><span class="pub-venue">${escapeHtml(publication.venue)}${yearLabel}</span>${publication.status !== 'published' ? `<span class="pub-status">${labels[publication.status]}</span>` : ''}</div>
+          <div class="pub-meta"><span class="pub-role pub-role-${publication.role}">${publication.role === 'first' ? 'FIRST AUTHOR' : 'COLLABORATION'}</span><span class="pub-venue">${escapeHtml(publication.venue)}${yearLabel}</span>${publication.status !== 'published' ? `<span class="pub-status">${labels[publication.status]}</span>` : ''}</div>
           <h3>${publication.url ? link(publication.url, title) : title}</h3>
           <p class="pub-authors">${authorHtml}</p>${publication.note ? `\n          <p class="pub-note">${escapeHtml(publication.note)}</p>` : ''}${links ? `\n          <div class="pub-links">${links}</div>` : ''}
         </div>
