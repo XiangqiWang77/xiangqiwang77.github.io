@@ -15,6 +15,7 @@ The generated website is in `dist/`. Preview that directory with any static HTTP
 
 ## Update content
 
+- Preserve the homepage introduction order: portrait first, then name and biography, followed by the research overview. The portrait stays at the left on desktop and above the name on mobile. Use “PhD Student,” and keep the name typography modest.
 - Edit the biography, research overview, experience, education, contact links, and page metadata in `site/index.html`.
 - Edit the collaborations introduction, navigation, and page metadata in `site/collaborations/index.html`.
 - `data/profile.json` preserves structured resume reference data only; it is not rendered by the build. Updating visible profile content requires editing `site/index.html`.

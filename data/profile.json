@@ -1,13 +1,13 @@
 {
   "name": "Xiangqi (Shawn) Wang",
   "publicationName": "Xiangqi Wang",
-  "title": "PhD Candidate",
+  "title": "PhD Student",
   "focus": "LLM Continual Learning",
   "institution": "University of Notre Dame",
   "location": "South Bend, Indiana",
   "email": "xwang76@nd.edu",
   "updated": "September 2026",
-  "bio": "I am a PhD candidate at the University of Notre Dame, working on LLM continual learning: enabling models to adapt from experience while preserving reliable reasoning and aligned behavior. My research spans test-time training, self-distillation, reinforcement learning, and adaptive agent systems, connecting principled algorithms with efficient deployment.",
+  "bio": "I am a PhD student in Computer Science and Engineering at the University of Notre Dame, advised by Prof. Xiangliang Zhang. My research focuses on continual learning for language models.",
   "links": {
     "website": "https://xiangqiwang77.github.io/",
     "scholar": "https://scholar.google.com/citations?user=7jBSnlgAAAAJ",
@@ -55,7 +55,7 @@
   "education": [
     {
       "institution": "University of Notre Dame",
-      "degree": "PhD Candidate, Computer Science and Engineering",
+      "degree": "PhD Student, Computer Science and Engineering",
       "period": "Sep. 2024–Present",
       "location": "South Bend, IN",
       "advisor": "Prof. Xiangliang Zhang",
