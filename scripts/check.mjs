@@ -1,0 +1,94 @@
+import assert from 'node:assert/strict';
+import { execFileSync } from 'node:child_process';
+import { readFile, readdir, stat } from 'node:fs/promises';
+import { dirname, extname, join, relative, resolve, sep } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { renderPublications, validatePublications } from './publications.mjs';
+
+const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
+const output = join(root, 'dist');
+const html = await readFile(join(output, 'index.html'), 'utf8');
+const publications = JSON.parse(await readFile(join(root, 'data', 'publications.json'), 'utf8'));
+validatePublications(publications);
+assert(!html.includes('<!-- PUBLICATIONS -->'), 'Publication placeholder was not replaced.');
+assert.equal((html.match(/class="publication"/g) || []).length, publications.length, 'Every publication must be rendered.');
+assert(/<title>[^<]+<\/title>/i.test(html), 'A page title is required.');
+assert(/<meta\s+[^>]*name=["']description["']/i.test(html), 'A page description is required.');
+assert(/<html\s+[^>]*lang=["']en["']/i.test(html), 'The page language is required.');
+
+const ids = [...html.matchAll(/\bid=["']([^"']+)["']/g)].map((match) => match[1]);
+assert.equal(new Set(ids).size, ids.length, 'HTML IDs must be unique.');
+const rootIds = new Set(ids);
+const sample = {
+  id: 'escape-test', title: 'Safety < & "title"', authors: 'Xiangqi Wang, A & B', year: 2026,
+  venue: 'Test', status: 'submission', role: 'first', topics: ['test'], url: '', code: '', note: '<script>unsafe</script>',
+};
+const rendered = renderPublications([sample]);
+assert(rendered.includes('Safety &lt; &amp; &quot;title&quot;'), 'Publication titles must be HTML escaped.');
+assert(!rendered.includes('<script>'), 'Publication data must not render as markup.');
+assert(rendered.includes('<strong>Xiangqi Wang</strong>'), 'The site owner must be highlighted in author lists.');
+assert(rendered.includes('Under review'), 'Submission status must stay explicit.');
+assert.throws(() => renderPublications([{ ...sample, url: 'javascript:alert(1)' }]), /HTTPS or HTTP/);
+assert.throws(() => validatePublications([sample, sample]), /duplicates id/);
+
+async function walk(directory) {
+  const files = [];
+  for (const entry of await readdir(directory, { withFileTypes: true })) {
+    const path = join(directory, entry.name);
+    files.push(...(entry.isDirectory() ? await walk(path) : [path]));
+  }
+  return files;
+}
+
+const files = await walk(output);
+const scripts = (await walk(join(root, 'scripts'))).filter((file) => extname(file) === '.mjs');
+for (const file of [...scripts, ...files.filter((file) => ['.js', '.mjs'].includes(extname(file)))]) {
+  execFileSync(process.execPath, ['--check', file], { stdio: 'pipe' });
+}
+
+let localReferences = 0;
+for (const file of files.filter((file) => ['.html', '.css'].includes(extname(file)))) {
+  const content = await readFile(file, 'utf8');
+  const references = extname(file) === '.html'
+    ? [...content.matchAll(/\b(?:href|src)\s*=\s*["']([^"']+)["']/g)].map((match) => match[1])
+    : [...content.matchAll(/url\(\s*["']?([^\s)'";]+)["']?\s*\)/g)].map((match) => match[1]);
+  for (const reference of references) {
+    if (/^(?:[a-z][a-z0-9+.-]*:|\/\/)/i.test(reference)) continue;
+    const [pathWithQuery, anchor] = reference.split('#');
+    const assetPath = decodeURIComponent(pathWithQuery.split('?')[0]);
+    let resolved = assetPath.startsWith('/') ? join(output, assetPath.slice(1)) : resolve(dirname(file), assetPath || relative(dirname(file), file));
+    assert(resolved === output || resolved.startsWith(`${output}${sep}`), `Reference escapes dist/: ${reference}`);
+    let info;
+    try { info = await stat(resolved); } catch { throw new Error(`Missing local reference in ${relative(output, file)}: ${reference}`); }
+    if (info.isDirectory()) resolved = join(resolved, 'index.html');
+    await stat(resolved);
+    if (anchor && extname(resolved) === '.html') {
+      const targetIds = resolved === join(output, 'index.html') ? rootIds : new Set(
+        [...(await readFile(resolved, 'utf8')).matchAll(/\bid=["']([^"']+)["']/g)].map((match) => match[1]));
+      assert(targetIds.has(decodeURIComponent(anchor)), `Missing anchor in ${relative(output, file)}: ${reference}`);
+    }
+    localReferences++;
+  }
+}
+
+for (const file of ['robots.txt', 'sitemap.xml', '.nojekyll', 'about/index.html', 'publications/index.html', 'projects/index.html', 'news/index.html']) {
+  await stat(join(output, file));
+}
+
+const cv = await readFile(join(output, 'assets', 'xiangqi-wang-cv.pdf'));
+assert.equal(cv.subarray(0, 5).toString(), '%PDF-', 'The downloadable CV must be a PDF.');
+assert.deepEqual(await readFile(join(output, 'cv.pdf')), cv, 'The legacy /cv.pdf URL must serve the current CV.');
+assert(/href=["'](?:\.\/)?assets\/xiangqi-wang-cv\.pdf["']/.test(html), 'The homepage must link to the current CV.');
+
+for (const filename of ['dm-sans.woff2', 'instrument-serif.woff2', 'instrument-serif-italic.woff2']) {
+  const font = await readFile(join(output, 'assets', filename));
+  assert.equal(font.subarray(0, 4).toString(), 'wOF2', `${filename} must be a WOFF2 font.`);
+}
+for (const filename of ['DM-Sans-LICENSE.txt', 'Instrument-Serif-LICENSE.txt']) {
+  assert((await stat(join(output, 'assets', filename))).size > 0, `${filename} must accompany the fonts.`);
+}
+const socialImage = await readFile(join(output, 'assets', 'social-card.png'));
+assert.deepEqual(socialImage.subarray(0, 8), Buffer.from([137, 80, 78, 71, 13, 10, 26, 10]), 'The social preview must be a PNG image.');
+assert(html.includes('assets/social-card.png'), 'The homepage must reference the social preview image.');
+
+console.log(`Checks passed: ${publications.length} publications, ${localReferences} local references, JavaScript syntax, escaped data, legacy redirects, CV compatibility, fonts, and social preview.`);

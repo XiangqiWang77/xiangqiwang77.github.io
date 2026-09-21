@@ -1,0 +1,12 @@
+{
+  "name": "xiangqi-wang-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Xiangqi Wang's personal research website",
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/check.mjs"
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "name": "Xiangqi (Shawn) Wang",
+  "publicationName": "Xiangqi Wang",
+  "title": "PhD Candidate",
+  "focus": "LLM Continual Learning",
+  "institution": "University of Notre Dame",
+  "location": "South Bend, Indiana",
+  "email": "xwang76@nd.edu",
+  "updated": "September 2026",
+  "bio": "I am a PhD candidate at the University of Notre Dame, working on LLM continual learning: enabling models to adapt from experience while preserving reliable reasoning and aligned behavior. My research spans test-time training, self-distillation, reinforcement learning, and adaptive agent systems, connecting principled algorithms with efficient deployment.",
+  "links": {
+    "website": "https://xiangqiwang77.github.io/",
+    "scholar": "https://scholar.google.com/citations?user=7jBSnlgAAAAJ",
+    "linkedin": "https://www.linkedin.com/in/xiangqi-wang-447ba6338/",
+    "github": "https://github.com/XiangqiWang77"
+  },
+  "research": [
+    {
+      "id": "adaptation",
+      "title": "Continual adaptation",
+      "description": "Meta-learned test-time adaptation and locality-constrained self-distillation for better reasoning with limited behavioral drift.",
+      "methods": ["PrimeTTT", "LGSD"]
+    },
+    {
+      "id": "reasoning",
+      "title": "Reliable reasoning & alignment",
+      "description": "Coherence-aware reinforcement learning and multi-objective preference alignment, balancing truthfulness, anti-sycophancy, empathy, and creativity.",
+      "methods": ["CE-PO", "Lag-DPO"]
+    },
+    {
+      "id": "online-learning",
+      "title": "Adaptive inference & online learning",
+      "description": "Reinforcement learning controllers for adaptive reasoning and fairness-aware contextual bandits with sublinear-regret guarantees.",
+      "methods": ["AdaReasoner", "Fair Online Influence Maximization"]
+    }
+  ],
+  "experience": [
+    {
+      "organization": "SAP",
+      "role": "Part-time iXp Research Intern",
+      "location": "Remote, USA",
+      "period": "Fall 2026",
+      "description": "",
+      "highlights": []
+    },
+    {
+      "organization": "IBM Research",
+      "role": "Research Intern",
+      "location": "Yorktown Heights, NY",
+      "period": "May–Aug. 2026",
+      "description": "AI Functions in SQL & LLM Systems",
+      "highlights": ["Developed SAGE, a unified algebra and adaptive execution framework for SQL AI functions, optimizing model selection and query execution for quality, cost, and latency."]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Notre Dame",
+      "degree": "PhD Candidate, Computer Science and Engineering",
+      "period": "Sep. 2024–Present",
+      "location": "South Bend, IN",
+      "advisor": "Prof. Xiangliang Zhang",
+      "advisorUrl": "https://scholar.google.com/citations?user=BhRJe4wAAAAJ",
+      "details": []
+    },
+    {
+      "institution": "University of Science and Technology of China",
+      "degree": "B.Sc. in Computer Science",
+      "period": "Sep. 2020–Jun. 2024",
+      "location": "Hefei, China",
+      "advisor": "Qi Liu",
+      "advisorUrl": "http://staff.ustc.edu.cn/~qiliuql/",
+      "details": ["First-Class Honors", "School of the Gifted Young"]
+    }
+  ],
+  "mentors": [
+    {"name": "Qi Liu", "context": "Advisor", "url": "http://staff.ustc.edu.cn/~qiliuql/"},
+    {"name": "Huazheng Wang", "context": "Remote research", "url": "https://huazhengwang.github.io/"},
+    {"name": "Jian Kang", "context": "Remote research", "url": "https://jiank2.github.io/"},
+    {"name": "Zhuoran Yang", "context": "Causal inference", "url": "https://zhuoranyang.github.io/"}
+  ],
+  "mentorship": "I guide student-led projects from problem selection and method design through experiments and writing, turning research ideas into reproducible results and publication-ready manuscripts.",
+  "teaching": [
+    {"course": "Graduate Machine Learning", "institution": "University of Notre Dame", "role": "Teaching Assistant"},
+    {"course": "Computer Programming A", "institution": "USTC", "role": "Teaching Assistant"},
+    {"course": "Data Analysis and Practice", "institution": "USTC", "role": "Teaching Assistant"}
+  ],
+  "projects": [
+    {
+      "id": "causalrl",
+      "title": "CausalRL",
+      "description": "Extended VERL with Jacobian-based causal scores and a parallel reward backend for policy optimization.",
+      "url": "https://github.com/XiangqiWang77/causalrl",
+      "type": "Code",
+      "topics": ["reasoning", "alignment"]
+    },
+    {
+      "id": "adareasoner",
+      "title": "AdaReasoner",
+      "description": "Official implementation with a modular reasoning controller and reproducible training and inference pipelines.",
+      "url": "https://github.com/XiangqiWang77/officialadareasoner",
+      "type": "Code",
+      "topics": ["reasoning", "adaptation"]
+    },
+    {
+      "id": "fair-influence",
+      "title": "Fair Online Influence Maximization",
+      "description": "Combinatorial bandit codebase with scalable optimization, online experiments, and evaluation on public social graphs, including Pokec.",
+      "url": "https://github.com/wangxiangqi/Fair_IM_new",
+      "type": "Code",
+      "topics": ["online-learning"]
+    },
+    {
+      "id": "wildlife",
+      "title": "Knowledge Network of Wildlife",
+      "description": "A searchable national wildlife knowledge interface and graph-RAG chatbot for species, habitat, and policy queries, supporting an NSF-funded AI-for-science project.",
+      "url": "https://kn-wildlife.crc.nd.edu/",
+      "type": "Live system",
+      "topics": ["systems", "agents"]
+    },
+    {
+      "id": "proto-okn",
+      "title": "NSF Proto-OKN & ACCESS",
+      "description": "Contributed to data and knowledge integration and GPU research infrastructure through NSF ACCESS.",
+      "url": "https://www.proto-okn.net/",
+      "type": "Research infrastructure",
+      "topics": ["systems"]
+    }
+  ],
+  "honors": [
+    {"organization": "NSF", "title": "DISCOVER ACCESS research computing allocation", "year": 2025, "url": "https://allocations.access-ci.org/allocations-policy", "category": "Research support"},
+    {"organization": "OpenAI", "title": "Researcher Access Program — research API credits", "year": 2025, "url": "https://openai.com/form/researcher-access-program/", "category": "Research support"},
+    {"organization": "Anthropic", "title": "Research computing support", "year": null, "url": null, "category": "Research support"},
+    {"organization": "Chinese Mathematics Competition", "title": "Provincial First Prize", "year": 2022, "url": null, "category": "Competitive award"},
+    {"organization": "ICPC China Regional", "title": "Competition prize", "year": 2021, "url": null, "category": "Competitive award"},
+    {"organization": "USTC", "title": "Outstanding Student (annual award)", "year": null, "url": null, "category": "Academic recognition"},
+    {"organization": "USTC", "title": "SGY 87–00 Scholarship nominee", "year": null, "url": null, "category": "Academic recognition"}
+  ],
+  "service": [
+    {"role": "Conference reviewer", "organization": "NeurIPS, ICML, ICLR, KDD, ACL Rolling Review", "period": "2025–2026"},
+    {"role": "Conference reviewer", "organization": "WWW", "period": "2025"},
+    {"role": "Conference reviewer", "organization": "KDD", "period": "2024"},
+    {"role": "Journal reviewer", "organization": "Transactions on Machine Learning Research", "period": "2025"},
+    {"role": "Journal reviewer", "organization": "IEEE Transactions on Computational Social Systems", "period": null},
+    {"role": "Additional service", "organization": "IEEE NASC Competition", "period": null}
+  ],
+  "skills": {
+    "methods": ["Continual learning", "Test-time adaptation", "Meta-learning", "RL post-training", "Preference optimization", "Causal inference", "Contextual and combinatorial bandits", "Semantic query processing"],
+    "tools": ["PyTorch", "Transformers", "VERL", "LLaMA-Factory", "SQL", "Git", "Docker"]
+  },
+  "talksAndParticipation": ["NSF Proto-OKN Annual Meeting", "SASC Symposium", "ACM WSDM Tutorial", "EMNLP 2024", "Third Reinforcement Learning Conference (remote)"]
+}
