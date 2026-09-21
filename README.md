@@ -22,7 +22,7 @@ The generated website is in `dist/`. Preview that directory with any static HTTP
 - Add or revise publication records in `data/publications.json`. The array order controls the display order within each page. Each record has a unique lowercase `id`, `title`, `authors` (a string or array of names), integer `year` (or `null` when unspecified), `venue`, `status`, `role`, `topics`, and optional `url`, `code`, and `note`.
 - Use a publication `status` of `published`, `submission`, `preprint`, or `ongoing`. Use `role: "first"` for first/co-first authorship and `"coauthor"` otherwise. Keep submission and preprint labels accurate; the build displays them explicitly.
 - The build sends only `role: "first"` records to the homepage and only `role: "coauthor"` records to `/collaborations/`. Each page has its own search and publication-status filters; authorship is indicated visibly beside the venue.
-- Topic tags are lowercase words joined with hyphens, and should match the available browser filters. Use full `https://` links for papers and code, or leave them empty when there is no public link.
+- Topic tags are lowercase words joined with hyphens and are included in publication search. Use full `https://` links for papers and code, or leave them empty when there is no public link.
 - Place downloads, images, and other public assets inside `site/`, then reference them from the page. Never include private files in this directory.
 - Replace `site/assets/xiangqi-wang-cv.pdf` when updating the public CV. The build requires this PDF and also copies it to `dist/cv.pdf`, preserving the old `/cv.pdf` download URL.
 
